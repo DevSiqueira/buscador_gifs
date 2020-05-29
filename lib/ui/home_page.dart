@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
     http.Response response;
 
     //requisicao da api do giphy
-    if (_search == null) {
+    if (_search == null || _search.isEmpty) {
       response = await http.get(
           "https://api.giphy.com/v1/gifs/trending?api_key=IqvTk23auzTcCXPyFY29RAgLZp3XHw6C&limit=25&rating=G");
     } else {
